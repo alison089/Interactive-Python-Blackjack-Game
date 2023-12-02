@@ -94,30 +94,22 @@ while player_In or dealer_In:
 # the possibilities of game outcomes and the meanings/winners
 if total(playerHand) == 21:
     print(f"\n{name} has {playerHand} for a total of {total(playerHand)} and the dealer has {dealerHand} for a total of {total(dealerHand)}")
-    print("You Win! You got Blackjack")
+    print("You Win! You got Blackjack!🥳")
 elif total(dealerHand) == 21:
     print(f"\n{name} has {playerHand} for a total of {total(playerHand)} and the dealer has {dealerHand} for a total of {total(dealerHand)}")
-    print(" Blackjack! Dealer Wins!")   
+    print(" Dealer got Blackjack! You lose😭")   
 elif total(playerHand) > 21 and total(dealerHand) < 21:
     print(f"\n{name} has {playerHand} for a total of {total(playerHand)} and the dealer has {dealerHand} for a total of {total(dealerHand)}")
-    print("You busted! Dealer wins!") 
+    print("You busted! Dealer wins!😅") 
 elif total(dealerHand) > 21 and total(playerHand) < 21:
     print(f"\n{name} has {playerHand} for a total of {total(playerHand)} and the dealer has {dealerHand} for a total of {total(dealerHand)}")
-    print( " You win, Dealer busted!")
+    print( "You win, Dealer busted!😁")
 elif 21 - total(dealerHand) < 21 - total(playerHand):
     print(f"\nYou have {playerHand} for a total of {total(playerHand)} and the dealer has {dealerHand} for a total of {total(dealerHand)}")
-    print("Dealer Wins!")
+    print("Dealer Wins! You lose😢")
 elif 21 - total(dealerHand) > 21 - total(playerHand):
     print(f"\nYou have {playerHand} for a total of {total(playerHand)} and the dealer has {dealerHand} for a total of {total(dealerHand)}")
-    print("You Win!")    
+    print("You Win! Dealer loses😎")    
 elif total(playerHand) > 21 and total(dealerHand) > 21:
     print(f"\n{name} has {playerHand} for a total of {total(playerHand)} and the dealer has {dealerHand} for a total of {total(dealerHand)}")
-    print(" Its a tie!") 
-
-# games_to_play = int(input("Do you want to keep playing? If so, how many more games? "))
-# if games_to_play == 0:
-
-#elif games_to_play > 0:
-    #continue
-
-# add a function which allows me to play game over and over again
+    print(" Its a tie!🧐") 
