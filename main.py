@@ -8,29 +8,15 @@
 # Using "random" library in order to randomly select a card from the deck, import os in order to allow everything to operate with eachother
 import random
 
-#opening prompt + asking if player if they would like to play
-print("Welcome to our Game of Blackjack!")
-name = input("What is your name? ") 
-print("Hello " + name + "!")
-
-choice = input("Are you ready to play? (Y/N) : ").lower()
-if choice == "y":
-    print("Lets get started " + name + "!")
-else: 
-    print("Entry must be either Y or N")
-    print("No worries, bye bye 👋!")
-    exit()
+#opening prompt + asking if player if they would like to play via module
+from introduction import *
 
 #indicating the player and dealer are playing
 player_In = True
 dealer_In = True
 
-#created a list of the deck then adding them into the player and dealer hand 
-
-deck = [2, 3, 4, 5, 6, 7, 8, 9, 10, 2, 3, 4, 5, 6, 7, 8, 9, 10, 2, 3, 4, 5, 6, 7, 8, 9, 10, 2, 3, 4, 5, 6, 7, 8, 9, 10, 'A', 'J', 'Q', 'K', 'A', 'J', 'Q', 'K', 'A', 'J', 'Q', 'K', 'A', 'J', 'Q', 'K']
-
-playerHand = []
-dealerHand = []
+#created a list of the deck then adding them into the player and dealer hand via module
+from deck import *
 
 # used shuffle to shuffle the deck, apppend to add the card to the deck, then remove to remove the card from the deck
 def dealCard(turn):
